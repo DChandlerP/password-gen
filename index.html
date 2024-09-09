@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="form-group">
+            <label for="length">Password Length: <span id="lengthValue">12</span></label>
+            <input type="range" id="length" min="4" max="50" value="12">
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="uppercase" checked> Include Uppercase
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="lowercase" checked> Include Lowercase
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="numbers" checked> Include Numbers
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="symbols"> Include Symbols
+            </label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="password" readonly>
+        </div>
+        <button id="generate">Generate Password</button>
+        <button id="copy">Copy to Clipboard</button>
+    </div>
+
+    <div class="best-practices">
+        <h2>Password Best Practices</h2>
+        <ul>
+            <li><strong>Use unique passwords for each account:</strong> Never reuse passwords across different sites or services.</li>
+            <li><strong>Enable Multi-Factor Authentication (MFA):</strong> Use authenticator apps for added security:
+                <ul>
+                    <li><a href="https://support.google.com/accounts/answer/1066447?hl=en" target="_blank">Set up Google Authenticator</a></li>
+                    <li><a href="https://support.microsoft.com/en-us/account-billing/how-to-use-the-microsoft-authenticator-app-9783c865-0308-42fb-a519-8cf666fe0acc" target="_blank">Set up Microsoft Authenticator</a></li>
+                </ul>
+            </li>
+            <li><strong>Check for password breaches:</strong> Use services that notify you if your credentials have been exposed in a data breach:
+                <ul>
+                    <li><a href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a></li>
+                    <li><a href="https://passwords.google.com/" target="_blank">Google Password Checkup</a></li>
+                </ul>
+            </li>
+            <li><strong>Use a password manager:</strong> Consider using a reputable password manager to securely store and generate unique passwords for all your accounts.</li>
+            <li><strong>Regularly update passwords:</strong> Change your passwords periodically, especially for critical accounts.</li>
+            <li><strong>Avoid personal information:</strong> Don't use easily guessable information like birthdays, names, or common words in your passwords.</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
